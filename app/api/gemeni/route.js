@@ -1,7 +1,7 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import axios from 'axios';
 
-const genAI = new GoogleGenerativeAI("AIzaSyD3UP1tm1nNtzVMhMkRGbwOmxeKQt0byl0");
+const genAI = new GoogleGenerativeAI(process.env.GEMENI_API_KEY);
 
 async function fetchImageAsBase64(url) {
   try {
