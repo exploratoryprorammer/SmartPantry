@@ -17,13 +17,6 @@ import { ref, uploadBytesResumable, getDownloadURL,  } from 'firebase/storage';
 export default function Home() {
   const [user] = useAuthState(auth);
   const router = useRouter();
-
-
-  const userSession = sessionStorage.getItem('user');
-    if (!user && !userSession) {
-  router.push('/sign-in');
-  }
-
   
   const [inventory, setInventory] = useState([]);
   const [open, setOpen] = useState(false);
